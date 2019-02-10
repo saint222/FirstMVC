@@ -22,7 +22,7 @@ namespace FirstMVC.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Here is the contact information you will probably need:";
 
             return View();
         }
