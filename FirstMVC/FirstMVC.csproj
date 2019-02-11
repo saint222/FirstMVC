@@ -216,11 +216,7 @@
     <Content Include="Views\Factions\Details.cshtml" />
     <Content Include="Views\Factions\Edit.cshtml" />
     <Content Include="Views\Factions\Index.cshtml" />
-    <Content Include="Views\Warriors1\Create.cshtml" />
-    <Content Include="Views\Warriors1\Delete.cshtml" />
-    <Content Include="Views\Warriors1\Details.cshtml" />
-    <Content Include="Views\Warriors1\Edit.cshtml" />
-    <Content Include="Views\Warriors1\Index.cshtml" />
+    <Content Include="Views\Squads\BuyWarrior.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

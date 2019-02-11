@@ -14,6 +14,11 @@ namespace FirstMVC.Controllers
     {
         private WarriorsContext db = new WarriorsContext();
 
+        public ActionResult BuyWarrior()
+        {
+            return View(db.Squads.ToList());
+        }
+
         // GET: Squads
         public ActionResult Index()
         {
