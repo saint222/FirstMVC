@@ -4,14 +4,14 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>Squads Details</h2>
 
 <div>
-    <h4>Squad</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.SquadName)
+            @Html.DisplayNameFor(model => model.SquadName):
         </dt>
 
         <dd>
@@ -19,21 +19,29 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MasterCard)
+            @Html.DisplayNameFor(model => model.MasterCard):
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MasterCard)
+            @Html.DisplayFor(model => model.MasterCard) $
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FactionId)
+            @Html.DisplayNameFor(model => model.FactionId):
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.FactionId)
         </dd>
-
+        <dt>Warriors of the squad:</dt>
+        <dd>
+            @foreach (var item in Model.Warriors)
+            {
+            <div>
+                Name: @item.WarriorName; HP: @item.HP points; Price: @item.Price $;
+            </div>                
+            }
+        </dd>
     </dl>
 </div>
 <p>
