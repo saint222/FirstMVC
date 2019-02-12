@@ -14,11 +14,6 @@ namespace FirstMVC.Controllers
     {
         private WarriorsContext db = new WarriorsContext();
 
-        public ActionResult BuyWarrior()
-        {
-            return View(db.Squads.ToList());
-        }
-
         // GET: Squads
         public ActionResult Index()
         {
@@ -51,7 +46,7 @@ namespace FirstMVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,SquadName,MasterCard")] Squad squad)
+        public ActionResult Create([Bind(Include = "Id,SquadName,MasterCard,FactionId")] Squad squad)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +78,7 @@ namespace FirstMVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,SquadName,MasterCard")] Squad squad)
+        public ActionResult Edit([Bind(Include = "Id,SquadName,MasterCard,FactionId")] Squad squad)
         {
             if (ModelState.IsValid)
             {

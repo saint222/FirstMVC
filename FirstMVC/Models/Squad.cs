@@ -9,6 +9,7 @@ namespace FirstMVC.Models
     {
         public string SquadName { get; set; }
         public int MasterCard { get; set; }
+        public int? FactionId { get; set; }
         public virtual List<Warrior> Warriors { get; set; }
     }
 }
