@@ -13,7 +13,11 @@ namespace FirstMVC.Controllers
     public class WarriorsController : Controller
     {
         private WarriorsContext db = new WarriorsContext();
-        
+
+        public ActionResult Fight(int? id)
+        {
+            return View(db.Warriors.ToList());
+        }
 
         // GET: Warriors
         public ActionResult Index()
