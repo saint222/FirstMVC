@@ -17,7 +17,24 @@
         <dd>
             @Html.DisplayFor(model => model.FactionName)
         </dd>
-
+        <dt>Squads of the faction:</dt>
+        <dd>
+            @foreach (var item in Model.Squads)
+            {
+                <div>
+                    Name: @item.SquadName; Treasury: @item.MasterCard $; 
+                </div>
+            }
+        </dd>
+        <dt>Warriors of the fatcion:</dt>
+        <dd>
+            @foreach (var item in Model.Warriors)
+            {
+                <div>
+                    Name: @item.WarriorName; HP: @item.HP points; Price: @item.Price $; AttackStrength: @item.AttackStrength points; BlockStrength: @item.BlockStrength points;
+                </div>
+            }
+        </dd>
     </dl>
 </div>
 <p>
