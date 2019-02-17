@@ -317,7 +317,9 @@ body {
     line-height: 1.428571429;
     color: #333333;
     /*background-color: grey;*/
-    background-image: url("https://img1.goodfon.ru/original/1920x1200/4/43/bereg-poberezhe-zakat.jpg");
+    background-image: url("https://i.artfile.me/wallpaper/23-05-2018/2048x1152/zhivotnye-verblyudy-karavan-1344751.jpg");
+    background-size: cover;
+    background-attachment:fixed;
 }
 
 input,
@@ -4930,13 +4932,15 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
-  padding: 30px;
-  margin-bottom: 30px;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 2.1428571435;
-  color: inherit;
-  background-color: #eeeeee;
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: inherit;
+    /*background-color: #eeeeee;*/
+    background-image: url("https://blog.stanis.ru/img/116449.jpg");
+    background-size: cover;
 }
 
 .jumbotron h1 {
