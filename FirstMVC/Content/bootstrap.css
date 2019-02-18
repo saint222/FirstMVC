@@ -33,7 +33,8 @@ main,
 nav,
 section,
 summary {
-  display: block;
+    display: block;
+    text-align: center;
 }
 
 audio,
@@ -315,11 +316,12 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.428571429;
-    color: #333333;
+    color: #FFFAFA;
+    font-weight: bold;
     /*background-color: grey;*/
     background-image: url("https://i.artfile.me/wallpaper/23-05-2018/2048x1152/zhivotnye-verblyudy-karavan-1344751.jpg");
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
 }
 
 input,
@@ -765,6 +767,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  
 }
 
 .container:before,
@@ -788,9 +791,10 @@ pre code {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+    margin-right: -15px;
+    margin-left: -15px;
+    color: #FFFAFA;
+    }
 
 .row:before,
 .row:after {
@@ -860,10 +864,11 @@ pre code {
 .col-lg-10,
 .col-lg-11,
 .col-lg-12 {
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    color: #FFFAFA;
 }
 
 .col-xs-1,
@@ -2053,9 +2058,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #357ebd;
 }
 
 .btn-default:hover,
@@ -3319,11 +3324,12 @@ input[type="button"].btn-block {
 }
 
 .dropdown-header {
-  display: block;
-  padding: 3px 20px;
-  font-size: 12px;
-  line-height: 1.428571429;
-  color: #999999;
+    display: block;
+    padding: 3px 20px;
+    font-size: 12px;
+    line-height: 1.428571429;
+    color: #FFFAFA;
+    font-weight: bold;
 }
 
 .dropdown-backdrop {
@@ -4396,11 +4402,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #777777;
 }
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
-  background-color: transparent;
-}
+    .navbar-default .navbar-brand:hover,
+    .navbar-default .navbar-brand:focus {
+        color: #777777;
+        background-color: transparent;
+    }
 
 .navbar-default .navbar-text {
   color: #777777;
@@ -4509,34 +4515,37 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-color: #080808;
 }
 
-.navbar-inverse .navbar-brand {
-  color: #999999;
-}
+    .navbar-inverse .navbar-brand {
+        color: #FFFAFA;
+        /*font-weight: bold;*/
+    }
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  color: grey;
   background-color: transparent;
 }
 
-.navbar-inverse .navbar-text {
-  color: #999999;
-}
+    .navbar-inverse .navbar-text {
+        color: #FFFAFA;
+        font-weight: bold;
+    }
 
-.navbar-inverse .navbar-nav > li > a {
-  color: #999999;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: #FFFAFA;
+        font-weight: bold;
+    }
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
+  color: grey;
   background-color: transparent;
 }
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  color: #ffffff;
+  color: grey;
   background-color: #080808;
 }
 
@@ -4565,29 +4574,29 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-color: #101010;
 }
 
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #080808;
-}
+    .navbar-inverse .navbar-nav > .open > a,
+    .navbar-inverse .navbar-nav > .open > a:hover,
+    .navbar-inverse .navbar-nav > .open > a:focus {
+        color: #A9A9A9;
+        background-color: #080808;
+    }
 
-.navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
-}
+    .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
+        border-top-color: #A9A9A9;
+        border-bottom-color: #A9A9A9;
+    }
 
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
   border-top-color: #999999;
   border-bottom-color: #999999;
 }
 
-.navbar-inverse .navbar-nav > .open > a .caret,
-.navbar-inverse .navbar-nav > .open > a:hover .caret,
-.navbar-inverse .navbar-nav > .open > a:focus .caret {
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
-}
+    .navbar-inverse .navbar-nav > .open > a .caret,
+    .navbar-inverse .navbar-nav > .open > a:hover .caret,
+    .navbar-inverse .navbar-nav > .open > a:focus .caret {
+        border-top-color: #A9A9A9;
+        border-bottom-color: #A9A9A9;
+    }
 
 @media (max-width: 767px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
@@ -4598,7 +4607,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
+    color: #A9A9A9;
     background-color: transparent;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,
@@ -4619,9 +4628,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #999999;
 }
 
-.navbar-inverse .navbar-link:hover {
-  color: #ffffff;
-}
+    .navbar-inverse .navbar-link:hover {
+        color: #A9A9A9;
+    }
 
 .breadcrumb {
   padding: 8px 15px;
@@ -4937,10 +4946,11 @@ a.list-group-item.active > .badge,
     font-size: 21px;
     font-weight: 200;
     line-height: 2.1428571435;
-    color: inherit;
-    /*background-color: #eeeeee;*/
-    background-image: url("https://blog.stanis.ru/img/116449.jpg");
+    color: #FFFAFA;    
+    /*background-color: rgba(255, 69, 0, 0.2);*/
+    background-image: url("https://i.artfile.me/wallpaper/23-05-2018/2048x1152/zhivotnye-verblyudy-karavan-1344751.jpg");
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .jumbotron h1 {

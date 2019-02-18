@@ -1,0 +1,64 @@
+﻿@model IEnumerable<FirstMVC.Models.Warrior>
+@{
+    ViewBag.Title = "Fight";
+}
+
+<h2>Fight</h2>
+<p>Here is the list of factions, taking part in cOrOvans robbery:</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WarriorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttackStrength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BlockStrength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SquadId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WarriorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttackStrength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockStrength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SquadId)
+            </td>            
+        </tr>
+    }
+
+</table>
+<p>Press <a href="/Warriors/Fight">"Go"</a> to rob the cOrOvan and <a href="/Home/Index"> "Back"</a> to get back to the Main menu...</p>
+@*@Html.ActionLink("Go", "Fight", "Warriors")
+<br>
+@Html.ActionLink("Back", "Index", "Home")*@
+
+
+
+
+

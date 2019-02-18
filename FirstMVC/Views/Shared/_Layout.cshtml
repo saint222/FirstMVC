@@ -16,15 +16,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("MvcFirst", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @*@Html.ActionLink("MvcFirst", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
+                @*<a href="Home/Index" title="Home page">
+                        <img src=" https://flaticons.net/gd/makefg.php?i=icons/Wildlife/Camel.png&r=255&g=255&b=255" width="50" height="50">
+                    </a>*@
                 <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/Home/Index" title="Home page">
+                            <img src=" https://flaticons.net/gd/makefg.php?i=icons/Wildlife/Camel.png&r=255&g=255&b=255" width="40" height="35">
+                        </a>
+                    </li>
+                    <li>@Html.ActionLink("Rob cOrOvans", "Fight", "Warriors")</li>
                     <li>@Html.ActionLink("Warriors", "Index", "Warriors")</li>
                     <li>@Html.ActionLink("Squads", "Index", "Squads")</li>
                     <li>@Html.ActionLink("Factions", "Index", "Factions")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+
             </div>
         </div>
     </div>

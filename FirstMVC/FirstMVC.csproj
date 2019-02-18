@@ -226,6 +226,9 @@
     <Content Include="Views\Factions\Edit.cshtml" />
     <Content Include="Views\Factions\Index.cshtml" />
     <Content Include="Views\Squads\BuyWarrior.cshtml" />
+    <Content Include="Views\Warriors\Fighter1lost.cshtml" />
+    <Content Include="Views\Warriors\Figter2lost.cshtml" />
+    <Content Include="Views\Warriors\Fight.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

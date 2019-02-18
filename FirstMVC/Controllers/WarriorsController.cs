@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using FirstMVC.Helpers;
 using FirstMVC.Models;
 
 namespace FirstMVC.Controllers
@@ -13,11 +14,63 @@ namespace FirstMVC.Controllers
     public class WarriorsController : Controller
     {
         private WarriorsContext db = new WarriorsContext();
-
-        public ActionResult Fight(int? id)
+        //get Fight
+        public ActionResult Fight ()
         {
             return View(db.Warriors.ToList());
         }
+
+        //public ActionResult Fight (int? id)
+        //{            
+        //    var figter_1 = db.Warriors.FirstOrDefault();
+        //    var figter_2 = db.Warriors.FirstOrDefault();
+        //    int conditionFirst = figter_1.HP;
+        //    int conditionSecond = figter_2.HP;
+        //    while (conditionFirst > 0 && conditionSecond > 0)
+        //    {
+        //        var damage_1 = figter_2.AttackStrength - figter_1.BlockStrength;
+        //        if (damage_1 > 10)
+        //        {
+        //            conditionFirst = conditionFirst - damage_1;
+        //            Console.WriteLine($"{figter_1.WarriorName} got {damage_1} points of damage. {figter_1.WarriorName}'s HP is {conditionFirst}.");
+        //        }
+        //        else
+        //        {
+        //            conditionFirst = conditionFirst - (MyRandom.Rand.Next(1, 6)); //рандом через статик-класс
+        //            Console.WriteLine($"{figter_1.WarriorName} got {damage_1} points of damage. {figter_1.WarriorName}'s HP is {conditionFirst}.");
+        //        }
+        //        var damge_2 = figter_1.AttackStrength - figter_2.BlockStrength;
+        //        if (damge_2 > 10)
+        //        {
+        //            conditionSecond = conditionSecond - damge_2;
+        //            Console.WriteLine($"{figter_2.WarriorName} got {damge_2} points of damage. {figter_2.WarriorName}'s HP is {conditionSecond}.");
+        //        }
+        //        else
+        //        {
+        //            conditionSecond = conditionSecond - (MyRandom.Rand.Next(1, 6)); //рандом через статик-класс
+        //            Console.WriteLine($"{figter_2.WarriorName} got {damge_2} points of damage. {figter_2.WarriorName}'s HP is {conditionSecond}.");
+        //        }
+        //        if (conditionFirst <= 0)
+        //        {
+        //            Console.WriteLine();
+        //            Console.WriteLine($"{figter_1.WarriorName} has lost...");
+        //            Console.WriteLine($"{figter_2.WarriorName} has won...");
+        //            Console.WriteLine("\nPress Enter to continue...");
+        //            db.SaveChanges();
+        //            return View("Figter1lost");
+        //        }
+        //        else if (conditionSecond <= 0)
+        //        {
+        //            Console.WriteLine();
+        //            Console.WriteLine($"{figter_1.WarriorName} has won...");
+        //            Console.WriteLine($"{figter_2.WarriorName} has lost...");
+        //            Console.WriteLine("\nPress Enter to continue...");
+        //            db.SaveChanges();
+        //            return View("Figter2lost");
+        //        }
+        //    }
+        //}
+
 
         // GET: Warriors
         public ActionResult Index()
