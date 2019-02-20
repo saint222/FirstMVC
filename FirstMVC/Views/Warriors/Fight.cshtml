@@ -2,11 +2,13 @@
 @{
     ViewBag.Title = "Fight";
 }
-
 <h2>Fight</h2>
-<p>Here is the list of factions, taking part in cOrOvans robbery:</p>
+<p>Here is the list of factions, taking part in cOrOvans robbery. Choose 2 of them and press "Fight" to start fighting:</p>
 <table class="table">
     <tr>
+        <th>
+            Select
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.WarriorName)
         </th>
@@ -27,36 +29,44 @@
         </th>
         <th></th>
     </tr>
-
-    @foreach (var item in Model)
+    @using (Html.BeginForm())
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.WarriorName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HP)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AttackStrength)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BlockStrength)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SquadId)
-            </td>            
-        </tr>
-    }
+        <input type="submit" value="Fight">
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="fighters" value="@item.Id" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WarriorName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AttackStrength)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BlockStrength)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SquadId)
+                </td>
+            </tr>
+        }
 
+    }
 </table>
-<p>Press <a href="/Warriors/Fight">"Go"</a> to rob the cOrOvan and <a href="/Home/Index"> "Back"</a> to get back to the Main menu...</p>
+<p>Press <a href="/Home/Index"> "Back"</a> to get back to the Main menu...</p>
 @*@Html.ActionLink("Go", "Fight", "Warriors")
-<br>
-@Html.ActionLink("Back", "Index", "Home")*@
+    <br>
+    @Html.ActionLink("Back", "Index", "Home")*@
+
+
 
 
 
