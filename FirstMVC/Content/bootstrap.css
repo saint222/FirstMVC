@@ -6829,4 +6829,6 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+    .chebur {text-align:center;
+    }
 }
