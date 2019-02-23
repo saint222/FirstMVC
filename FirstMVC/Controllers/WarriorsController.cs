@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using FirstMVC.Helpers;
@@ -15,9 +16,9 @@ namespace FirstMVC.Controllers
     {
         private WarriorsContext db = new WarriorsContext();
         //get Fight
-        public ActionResult Fight ()
+        public async Task<ActionResult> Fight () // асинхронный метод Fight
         {
-            return View(db.Warriors.ToList());
+            return View(await db.Warriors.ToListAsync());
         }
 
         [HttpPost]
@@ -51,11 +52,11 @@ namespace FirstMVC.Controllers
                 }
                 if (conditionFirst <= 0)
                 {                    
-                    return View(viewName: "FightRes", model: $"{figter_1.WarriorName} kicked {figter_2.WarriorName}");
+                    return View(viewName: "FightRes", model: $"{figter_1.WarriorName} kicked {figter_2.WarriorName}'s ass and robbed his cOrOvan...");
                 }
                 else if (conditionSecond <= 0)
                 {                    
-                    return View(viewName: "FightRes", model: $"{figter_2.WarriorName} kicked {figter_1.WarriorName}");
+                    return View(viewName: "FightRes", model: $"{figter_2.WarriorName} kicked {figter_1.WarriorName}'s ass and robbed his cOrOvan...");
                 }
             }
             return View(model: "bug");
