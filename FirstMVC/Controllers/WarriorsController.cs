@@ -14,6 +14,17 @@ namespace FirstMVC.Controllers
 {
     public class WarriorsController : Controller
     {
+        public string Info()
+        {            
+            string browser = HttpContext.Request.Browser.Browser;
+            string user_agent = HttpContext.Request.UserAgent;
+            string url = HttpContext.Request.RawUrl;
+            string ip = HttpContext.Request.UserHostAddress;
+            string referrer = HttpContext.Request.UrlReferrer == null ? "" : HttpContext.Request.UrlReferrer.AbsoluteUri;
+            return "<p>Browser: " + browser + ";</p><p>User-Agent: " + user_agent + ";</p><p>Url of the request: " + url +
+                ";</p><p>Referrer: " + referrer + ";</p><p>IP-address: " + ip + ";</p>";
+        }
+
         private WarriorsContext db = new WarriorsContext();
         //get Fight
         public async Task<ActionResult> Fight () // асинхронный метод Fight
