@@ -9,6 +9,9 @@ using System.Web;
 using System.Web.Mvc;
 using FirstMVC.Helpers;
 using FirstMVC.Models;
+using PagedList.Mvc;
+using PagedList;
+
 
 namespace FirstMVC.Controllers
 {
@@ -73,12 +76,18 @@ namespace FirstMVC.Controllers
             return View(model: "bug");
         }
 
-
-        // GET: Warriors
         public ActionResult Index()
-        {
+        {            
             return View(db.Warriors.ToList());
         }
+
+        // GET: Warriors
+        //public ActionResult Index(int? page)
+        //{
+        //    int pageSize = 3;
+        //    int pageNumber = (page ?? 1);
+        //    return View(db.Warriors.ToPagedList(pageNumber, pageSize));
+        //}
 
         // GET: Warriors/Details/5
         public ActionResult Details(int? id)
