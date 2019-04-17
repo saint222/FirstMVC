@@ -6831,4 +6831,9 @@ td.visible-print {
   }
     .chebur {text-align:center;
     }
+    .error404 {
+        background-image: url("https://im0-tub-by.yandex.net/i?id=c272285c044024a6069c8ce586179d5a-l&n=13");
+        background-size: cover;
+        background-attachment: fixed;
+    }
 }

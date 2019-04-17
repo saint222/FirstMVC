@@ -77,16 +77,16 @@ namespace FirstMVC.Controllers
         }
 
         public ActionResult Index()
-        {            
+        {
             return View(db.Warriors.ToList());
         }
 
-        // GET: Warriors
+        ////GET: Warriors
         //public ActionResult Index(int? page)
         //{
         //    int pageSize = 3;
         //    int pageNumber = (page ?? 1);
-        //    return View(db.Warriors.ToPagedList(pageNumber, pageSize));
+        //    return View(db.Warriors.ToPagedList(pageNumber, pageSize).OrderBy());
         //}
 
         // GET: Warriors/Details/5
