@@ -1,14 +1,14 @@
 ﻿@model System.Web.Mvc.HandleErrorInfo
 @{
     //Layout = "_Layout.cshtml";
-    ViewBag.Title = "Error";
+    ViewBag.Title = "Error404";
 }
 <div class="list-header clearfix">
-    <span>Error404</span>
+    <span>Error 404</span>
 </div>
 <div class="list-sfs-holder">
     <div class="alert alert-error">
-        404 NOT FOUND....
+        Ups...404 NOT FOUND....        
     </div>
     @if (Model != null && HttpContext.Current.IsDebuggingEnabled)
     {

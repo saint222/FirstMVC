@@ -9,7 +9,7 @@ namespace FirstMVC.Controllers
     public class ErrorController : Controller
     {
         // GET: Error
-        public ActionResult Error()
+        public ActionResult Index()
         {
             return View("Error");
         }
