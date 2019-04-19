@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FirstMVC.Models;
+using PagedList;
 
 namespace FirstMVC.Controllers
 {
@@ -15,9 +16,15 @@ namespace FirstMVC.Controllers
         private WarriorsContext db = new WarriorsContext();
 
         // GET: Squads
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Squads.ToList());
+        //}
+        public ActionResult Index(int? page)
         {
-            return View(db.Squads.ToList());
+            int pageSize = 3;
+            int pageNumber = (page ?? 1);
+            return View(db.Squads.OrderBy(x => x.SquadName).ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Squads/Details/5

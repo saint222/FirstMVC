@@ -1,4 +1,7 @@
-﻿@model IEnumerable<FirstMVC.Models.Squad>
+﻿@*@model IEnumerable<FirstMVC.Models.Squad>*@
+@model PagedList.IPagedList<FirstMVC.Models.Squad>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -12,32 +15,39 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SquadName)
+            SquadName
+            @*@Html.DisplayNameFor(model => model.SquadName)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.MasterCard)
+            MasterCard
+            @*@Html.DisplayNameFor(model => model.MasterCard)*@
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FactionId)
-        </th>        
+            FactionId
+            @*@Html.DisplayNameFor(model => model.FactionId)*@
+        </th>
     </tr>
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SquadName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MasterCard)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FactionId)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.SquadName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MasterCard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FactionId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
