@@ -76,18 +76,18 @@ namespace FirstMVC.Controllers
             return View(model: "bug");
         }
 
-        public ActionResult Index()
-        {
-            return View(db.Warriors.ToList());
-        }
+        //public ActionResult Index()
+        //{
+        //    return View(db.Warriors.ToList());
+        //}
 
         ////GET: Warriors
-        //public ActionResult Index(int? page)
-        //{
-        //    int pageSize = 3;
-        //    int pageNumber = (page ?? 1);
-        //    return View(db.Warriors.ToPagedList(pageNumber, pageSize).OrderBy());
-        //}
+        public ActionResult Index(int? page)
+        {
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(db.Warriors.OrderBy(x => x.WarriorName).ToPagedList(pageNumber, pageSize));
+        }
 
         // GET: Warriors/Details/5
         public ActionResult Details(int? id)
